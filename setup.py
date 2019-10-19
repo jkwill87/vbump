@@ -10,7 +10,7 @@ with open("readme.md", "r") as fp:
 setup(
     author="Jessy Williams",
     author_email="jessy@jessywilliams.com",
-    description="Yet another version bumper",
+    description="yet another python package version bump tool",
     entry_points={"console_scripts": ["vbump=vbump.__main__:main"]},
     include_package_data=True,
     license="MIT",
