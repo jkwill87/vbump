@@ -12,8 +12,12 @@ setup(
     author_email="jessy@jessywilliams.com",
     description="Yet another version bumper",
     entry_points={"console_scripts": ["vbump=vbump.__main__:main"]},
+    include_package_data=True,
     license="MIT",
+    long_description=LONG_DESCRIPTION,
+    long_description_content_type="text/markdown",
     name="vbump",
     packages=["vbump"],
-    url="https://github.com/jkwill87/vbump", version=VERSION,
+    url="https://github.com/jkwill87/vbump", 
+    version=VERSION,
 )
