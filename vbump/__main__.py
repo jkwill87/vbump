@@ -55,7 +55,6 @@ def main():
         target = SETUP_FILE
     else:
         raise FileNotFoundError("could not find __version__.py or setup.py")
-    print("Using %s" % target)
 
     # Parse target
     major, minor, patch = parse_target(target)
@@ -63,11 +62,12 @@ def main():
 
     # Print current version if no bump level specified
     if not any((args.major, args.minor, args.patch)):
-        print("Current version: %s" % current_version)
+        print(current_version)
         return
 
     # Determine updated version
     current_version = "%d.%d.%d" % (major, minor, patch)
+    print("Using %s" % target)
     if args.major:
         updated_version = "%d.%d.%d" % (major + 1, minor, patch)
     elif args.minor:
