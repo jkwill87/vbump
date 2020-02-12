@@ -69,9 +69,9 @@ def main():
     current_version = "%d.%d.%d" % (major, minor, patch)
     print("Using %s" % target)
     if args.major:
-        updated_version = "%d.%d.%d" % (major + 1, minor, patch)
+        updated_version = "%d.%d.%d" % (major + 1, 0, 0)
     elif args.minor:
-        updated_version = "%d.%d.%d" % (major, minor + 1, patch)
+        updated_version = "%d.%d.%d" % (major, minor + 1, 0)
     elif args.patch:
         updated_version = "%d.%d.%d" % (major, minor, patch + 1)
     print("Updated version: %s => %s" % (current_version, updated_version))
